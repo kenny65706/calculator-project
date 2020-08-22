@@ -11,32 +11,18 @@ namespace calculator
 		{
 			return opta + optb;
 		}
-		static string Subtraction(string output)
+		static int Subtraction(int opta, int optb)
 		{
-			Console.WriteLine(output);
-			Console.WriteLine("Please Type a number");
-			int input_one = int.Parse(Console.ReadLine());
-			Console.WriteLine("-");
-			int input_two = int.Parse(Console.ReadLine());
-			int diff = input_one - input_two;
-			Console.WriteLine(string.Format("The difference of the two numbers is {0}...", diff)); 
-			return output;
+			return opta - optb;
 		}
 		
 		static int Multiplication(int opta,int optb)
 		{
 			return opta * optb;
 		}
-		static string Division(string output)
+		static int Division(int opta, int optb)
 		{
-			Console.WriteLine(output);
-			Console.WriteLine("Please Type a number");
-			decimal input_one = int.Parse(Console.ReadLine());
-			Console.WriteLine("/");
-			decimal input_two = int.Parse(Console.ReadLine());
-			decimal quotient = input_one / input_two;
-			Console.WriteLine(string.Format("The qoutient of the two numbers is {0}...", quotient)); 
-			return output;
+			return opta / optb;
 		}
 		//Making calculator functions to add/sub/mult/div two numbers given by the user and print the results
 		//bonus for making the result inclue remainder for division
@@ -81,7 +67,12 @@ namespace calculator
 				case "+":
 					answer = Addition(inp1, inp2);
 					break;
-				
+				case "-":
+					answer = Subtraction(inp1, inp2);
+					break;
+				case: "/";
+					answer = Division (inp1, inp2);
+					break;
 				default:
 					Console.WriteLine(string.Format("We don't know what operation {0} is.", args[1]));
 					return;
